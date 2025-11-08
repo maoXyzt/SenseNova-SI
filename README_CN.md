@@ -133,12 +133,20 @@ TBA
 
 ### 示例
 
+#### 单图多选题
 
-```python
-model_path = "sensenova/SenseSI-InternVL3-8B"
-tokenizer = AutoTokenizer.from_pretrained(model_path）
-model = AutoModel.from_pretrained(model_path,torch_dtype=torch.bfloat16,low_cpu_mem_usage=True,use_flash_attn=True,trust_remote_code=True).eval().cuda()
+该例题源自[SITE-Bench](https://wenqi-wang20.github.io/SITE-Bench.github.io/)的`MultiV`子集:
+
+```bash
+python example.py --model_path sensenova/SenseSI-InternVL3-8B
+# python example.py --model_path OpenGVLab/InternVL3-8B
 ```
+
+#### 多图多选题
+
+该例题源自[MindCube](https://mind-cube.github.io/)的`Rotation`子集:
+
+TBA
 
 
 ### 评测

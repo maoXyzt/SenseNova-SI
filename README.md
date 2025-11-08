@@ -134,12 +134,21 @@ TBA
 
 ### Examples
 
+#### Single-image MCQ
 
-```python
-model_path = "sensenova/SenseSI-InternVL3-8B"
-tokenizer = AutoTokenizer.from_pretrained(model_path）
-model = AutoModel.from_pretrained(model_path,torch_dtype=torch.bfloat16,low_cpu_mem_usage=True,use_flash_attn=True,trust_remote_code=True).eval().cuda()
+This example is from the `MultiV` subset of [SITE-Bench](https://wenqi-wang20.github.io/SITE-Bench.github.io/):
+
+
+```bash
+python example.py --model_path sensenova/SenseSI-InternVL3-8B
+# python example.py --model_path OpenGVLab/InternVL3-8B
 ```
+
+#### Multi-image MCQ
+
+This example is from the `Rotation` subset of [MindCube](https://mind-cube.github.io/):
+
+TBA
 
 
 ### Evaluation
