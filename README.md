@@ -115,7 +115,7 @@ which achieve state-of-the-art performance among open-source models of comparabl
       <td>Gemini-2.5-pro-2025-06</td><td>53.57</td><td>38.00</td><td>57.60</td><td>46.06</td>
     </tr>
     <tr style="color:#6b7280;">
-      <td>Grok-4-2025-07-09</td><td>47.92</td><td>37.80</td><td>63.56</td><td>-</td>
+      <td>Grok-4-2025-07-09</td><td>47.92</td><td>37.80</td><td>63.56</td><td>43.23</td>
     </tr>
     <tr style="color:#6b7280;">
       <td>GPT-5-2025-08-07</td><td>55.03</td><td>41.80</td><td>56.30</td><td>45.59</td>
