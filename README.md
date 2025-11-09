@@ -129,19 +129,24 @@ which achieve state-of-the-art performance among open-source models of comparabl
 
 ### Installation
 
-TBA
-
-### Examples
+```bash
+git clone git@github.com:OpenSenseNova/SenseSI.git
+cd SenseSI/
+uv sync
+source .venv/bin/activate
+```
 
 #### Hello World
 
-A simple test without images to verify that the models have been correctly downloaded.
+A simple image-free test to verify environment setup and download the model.
 
-```
+```bash
 python example.py \
   --question "Hello" \
   --model_path sensenova/SenseSI-InternVL3-8B
 ```
+
+### Examples
 
 #### Test Single-Image MCQ
 

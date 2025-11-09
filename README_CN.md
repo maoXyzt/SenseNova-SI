@@ -128,20 +128,24 @@
 
 ### 安装
 
-TBA
-
-### 示例
+```bash
+git clone git@github.com:OpenSenseNova/SenseSI.git
+cd SenseSI/
+uv sync
+source .venv/bin/activate
+```
 
 #### Hello World
 
-无需图像的简单测试，以验证模型是否已正确下载。
+无需图像的简单测试，以验证环境是否正确配置，并下载模型。
 
-```
+```bash
 python example.py \
   --question "Hello" \
   --model_path sensenova/SenseSI-InternVL3-8B
 ```
 
+### 示例
 
 #### 测试单图多选题
 
