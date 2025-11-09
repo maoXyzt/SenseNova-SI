@@ -7,7 +7,7 @@
 <div align="center">
 
 
-English | [简体中文](README_CN.md) 
+[English](README.md) | 简体中文
 
 <p align="center">
     <a href="https://huggingface.co/collections/sensenova/sensesi" target="_blank">
@@ -147,12 +147,9 @@ python example.py \
 
 题目:
 <!-- Example 1 -->
-<div style="border:1px solid #e5e7eb; border-radius:12px; padding:16px; margin:16px 0;">
-  <div style="font-weight:600; font-size:16px; margin-bottom:8px;">
-    Example 1 · Single Image
-  </div>
+<div style="background:#f6f8fa; border:1px solid #e1e4e8; border-radius:8px; padding:16px; margin:16px 0;">
 
-  <div style="margin:8px 0 12px;">
+  <div style="margin:8px 0 12px;color:#24292f;">
     <strong>Q:</strong> Which figure is a top-down view of the given shape?\nOptions:\nA: A\nB: B\nC: C\nD: D
   </div>
 
@@ -175,9 +172,9 @@ python example.py \
 
 题目:
 <!-- Example 2 -->
-<div style="border:1px solid #e5e7eb; border-radius:12px; padding:16px; margin:16px 0;">
+<div style="background:#f6f8fa; border:1px solid #e1e4e8; border-radius:8px; padding:16px; margin:16px 0;">
 
-  <div style="margin:8px 0 12px;">
+  <div style="margin:8px 0 12px;color:#24292f;">
     <strong>Q:</strong> Based on these two views showing the same scene: in which direction did I move from the first view to the second view?\nDirectly left B. Directly right C. Diagonally forward and right D. Diagonally forward and left
   </div>
   <table>
