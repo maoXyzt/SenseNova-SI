@@ -195,7 +195,7 @@ python example.py \
 </details>
 
 
-#### Test Multiple Questions in a Sinlge Run
+#### Test Multiple Questions in a Single Run
 
 Prepare a file similar to [examples/examples.jsonl](examples/examples.jsonl), where each line represents a single question.
 
@@ -203,6 +203,13 @@ The model is loaded once and processes questions sequentially. The questions rem
 
 > For more details on the `jsonl` format, refer to the documentation for [Single-Image Data](https://internvl.readthedocs.io/en/latest/get_started/chat_data_format.html#single-image-data) and [Multi-Image Data](https://internvl.readthedocs.io/en/latest/get_started/chat_data_format.html#multi-image-data).
 
+
+```bash
+python example.py \
+  --jsonl_path examples/examples.jsonl \
+  --model_path sensenova/SenseSI-InternVL3-8B 
+# --model_path OpenGVLab/InternVL3-8B 
+```
 
 ### Evaluation
 
