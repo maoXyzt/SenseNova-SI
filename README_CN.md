@@ -124,7 +124,6 @@
 
 
 
-
 ## 🛠️ 快速上手
 
 ### 安装
@@ -145,18 +144,14 @@ python example.py \
 # --model_path OpenGVLab/InternVL3-8B 
 ```
 
-题目:
 <!-- Example 1 -->
-<div style="background:#f6f8fa; border:1px solid #e1e4e8; border-radius:8px; padding:16px; margin:16px 0;">
-
-  <div style="margin:8px 0 12px;color:#24292f;">
-    <strong>Q:</strong> Which figure is a top-down view of the given shape?\nOptions:\nA: A\nB: B\nC: C\nD: D
+<details open>
+  <summary><strong>题目详情</strong></summary>
+  <p><strong>Q:</strong> Which figure is a top-down view of the given shape?\nOptions:\nA: A\nB: B\nC: C\nD: D</p>
+  <div align="center">
+    <img src="./examples/Q1_1.png" style="width:40%; height:auto;">
   </div>
-
-  <div align="center" style="margin:8px 0;">
-    <img src="./examples/Q1_1.png" alt="Example 1 image" style="max-width:100%; height:auto;">
-  </div>
-</div>
+</details>
 
 #### 多图多选题
 
@@ -170,24 +165,22 @@ python example.py \
 # --model_path OpenGVLab/InternVL3-8B
 ```
 
-题目:
 <!-- Example 2 -->
-<div style="background:#f6f8fa; border:1px solid #e1e4e8; border-radius:8px; padding:16px; margin:16px 0;">
-
-  <div style="margin:8px 0 12px;color:#24292f;">
-    <strong>Q:</strong> Based on these two views showing the same scene: in which direction did I move from the first view to the second view?\nDirectly left B. Directly right C. Diagonally forward and right D. Diagonally forward and left
-  </div>
+<details open>
+  <summary><strong>题目详情</strong></summary>
+  <p><strong>Q:</strong> Based on these two views showing the same scene: in which direction did I move from the first view to the second view?\nDirectly left B. Directly right C. Diagonally forward and right D. Diagonally forward and left</p>
   <table>
     <tr>
       <td align="center" width="50%" style="padding:4px;">
-        <img src="./examples/Q2_1.png" alt="Image A" width="100%">
+        <img src="./examples/Q2_1.png" alt="First image" width="100%">
       </td>
       <td align="center" width="50%" style="padding:4px;">
-        <img src="./examples/Q2_2.png" alt="Image B" width="100%">
+        <img src="./examples/Q2_2.png" alt="Second image" width="100%">
       </td>
     </tr>
   </table>
-</div>
+</details>
+
 
 #### 批量测试
 
