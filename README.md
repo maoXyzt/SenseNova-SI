@@ -134,6 +134,16 @@ TBA
 
 ### Examples
 
+#### Hello World
+
+A simple test without images to verify that the models have been correctly downloaded.
+
+```
+python example.py \
+  --question "Hello" \
+  --model_path sensenova/SenseSI-InternVL3-8B
+```
+
 #### Test Single-Image MCQ
 
 This example is from the `MultiV` subset of [SITE-Bench](https://wenqi-wang20.github.io/SITE-Bench.github.io/):

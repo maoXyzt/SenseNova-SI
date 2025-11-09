@@ -34,7 +34,7 @@ if __name__ == "__main__":
         "--image_paths",
         type=str,
         nargs="+",
-        default=["./examples/Q1_1.png"],
+        default=[],
         help="Path to image files, can specify multiple",
     )
     parser.add_argument(
@@ -99,7 +99,9 @@ if __name__ == "__main__":
                 print("-" * 50)
     else:
         question = args.question
-        pixel_values = get_pixel_values(args.image_paths)
+        pixel_values = None
+        if len(args.image_paths) > 0:
+            pixel_values = get_pixel_values(args.image_paths)
 
         response = model.chat(
             tokenizer, pixel_values, question, generation_config, history=None

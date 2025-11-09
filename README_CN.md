@@ -132,6 +132,17 @@ TBA
 
 ### 示例
 
+#### Hello World
+
+无需图像的简单测试，以验证模型是否已正确下载。
+
+```
+python example.py \
+  --question "Hello" \
+  --model_path sensenova/SenseSI-InternVL3-8B
+```
+
+
 #### 测试单图多选题
 
 该例题源自[SITE-Bench](https://wenqi-wang20.github.io/SITE-Bench.github.io/)的`MultiV`子集:
