@@ -146,7 +146,7 @@ python example.py \
 
 <!-- Example 1 -->
 <details open>
-  <summary><strong>题目详情</strong></summary>
+  <summary><strong>示例1详情</strong></summary>
   <p><strong>Q:</strong> Which figure is a top-down view of the given shape?\nOptions:\nA: A\nB: B\nC: C\nD: D</p>
   <div align="center">
     <img src="./examples/Q1_1.png" style="width:40%; height:auto;">
@@ -167,7 +167,7 @@ python example.py \
 
 <!-- Example 2 -->
 <details open>
-  <summary><strong>题目详情</strong></summary>
+  <summary><strong>示例2详情</strong></summary>
   <p><strong>Q:</strong> Based on these two views showing the same scene: in which direction did I move from the first view to the second view?\nDirectly left B. Directly right C. Diagonally forward and right D. Diagonally forward and left</p>
   <table>
     <tr>
@@ -182,10 +182,12 @@ python example.py \
 </details>
 
 
-#### 批量测试
+#### 一次测试多个问题
 
 构建类似于[examples/examples.jsonl](examples/examples.jsonl)的文件，每一行代表一个问题。
+
 模型只加载一次，按逐行的顺序逐个回答问题，问题之间互不干扰。
+
 > `jsonl`更详细的格式可以参考[单图数据](https://internvl.readthedocs.io/en/latest/get_started/chat_data_format.html#single-image-data)和[多图数据](https://internvl.readthedocs.io/en/latest/get_started/chat_data_format.html#multi-image-data)
 
 ```bash
