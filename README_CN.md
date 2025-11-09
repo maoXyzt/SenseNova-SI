@@ -132,7 +132,7 @@ TBA
 
 ### 示例
 
-#### 单图多选题
+#### 测试单图多选题
 
 该例题源自[SITE-Bench](https://wenqi-wang20.github.io/SITE-Bench.github.io/)的`MultiV`子集:
 
@@ -153,7 +153,7 @@ python example.py \
   </div>
 </details>
 
-#### 多图多选题
+#### 测试多图多选题
 
 该例题源自[MindCube](https://mind-cube.github.io/)的`Rotation`子集:
 
