@@ -171,7 +171,7 @@ python example.py \
 ```bash
 python example.py \
   --image_paths examples/Q2_1.png examples/Q2_2.png \
-  --question "<image><image>\nBased on these two views showing the same scene: in which direction did I move from the first view to the second view?\nDirectly left B. Directly right C. Diagonally forward and right D. Diagonally forward and left" \
+  --question "<image><image>\nBased on these two views showing the same scene: in which direction did I move from the first view to the second view?\nA. Directly left B. Directly right C. Diagonally forward and right D. Diagonally forward and left" \
   --model_path sensenova/SenseSI-InternVL3-8B 
 # --model_path OpenGVLab/InternVL3-8B
 ```
