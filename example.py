@@ -12,12 +12,20 @@ def get_pixel_values(image_paths):
     print(f"Load {len(image_paths)} images...")
     for path in image_paths:
         print(f"Load image {path}...")
-        pixel_values_list.append(load_image(path, max_num=12).to(torch.bfloat16).cuda())
+        try:
+            pixel_values_list.append(
+                load_image(path, max_num=12).to(torch.bfloat16).cuda()
+            )
+        except Exception as e:
+            print(f"Error loading image {path}: {e}")
+            continue
 
     if len(pixel_values_list) > 1:
         pixel_values = torch.cat(pixel_values_list, dim=0)
-    else:
+    elif len(pixel_values_list) == 1:
         pixel_values = pixel_values_list[0]
+    else:
+        raise ValueError(f"No valid images found in {image_paths}")
     return pixel_values
 
 
