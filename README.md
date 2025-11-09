@@ -196,7 +196,7 @@ The model is loaded once and processes questions sequentially. The questions rem
 
 ### Evaluation
 
-To reproduce the results above, please refer to [EASI](https://github.com/EvolvingLMMs-Lab/EASI) to evaluate SenseSI on mainstream spatial intelligence benchmarks.
+To reproduce the benchmark results above, please refer to [EASI](https://github.com/EvolvingLMMs-Lab/EASI) to evaluate SenseSI on mainstream spatial intelligence benchmarks.
 
 
 ## What's next?
