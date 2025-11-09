@@ -138,16 +138,72 @@ TBA
 该例题源自[SITE-Bench](https://wenqi-wang20.github.io/SITE-Bench.github.io/)的`MultiV`子集:
 
 ```bash
-python example.py --model_path sensenova/SenseSI-InternVL3-8B
-# python example.py --model_path OpenGVLab/InternVL3-8B
+python example.py \
+  --image_paths examples/Q1_1.png \
+  --question "<image>\nWhich figure is a top-down view of the given shape?\nOptions:\nA: A\nB: B\nC: C\nD: D" \
+  --model_path sensenova/SenseSI-InternVL3-8B 
+# --model_path OpenGVLab/InternVL3-8B 
 ```
+
+题目:
+<!-- Example 1 -->
+<div style="border:1px solid #e5e7eb; border-radius:12px; padding:16px; margin:16px 0;">
+  <div style="font-weight:600; font-size:16px; margin-bottom:8px;">
+    Example 1 · Single Image
+  </div>
+
+  <div style="margin:8px 0 12px;">
+    <strong>Q:</strong> Which figure is a top-down view of the given shape?\nOptions:\nA: A\nB: B\nC: C\nD: D
+  </div>
+
+  <div align="center" style="margin:8px 0;">
+    <img src="./examples/Q1_1.png" alt="Example 1 image" style="max-width:100%; height:auto;">
+  </div>
+</div>
 
 #### 多图多选题
 
 该例题源自[MindCube](https://mind-cube.github.io/)的`Rotation`子集:
 
-TBA
+```bash
+python example.py \
+  --image_paths examples/Q2_1.png examples/Q2_2.png \
+  --question "<image><image>\nBased on these two views showing the same scene: in which direction did I move from the first view to the second view?\nDirectly left B. Directly right C. Diagonally forward and right D. Diagonally forward and left" \
+  --model_path sensenova/SenseSI-InternVL3-8B 
+# --model_path OpenGVLab/InternVL3-8B
+```
 
+题目:
+<!-- Example 2 -->
+<div style="border:1px solid #e5e7eb; border-radius:12px; padding:16px; margin:16px 0;">
+
+  <div style="margin:8px 0 12px;">
+    <strong>Q:</strong> Based on these two views showing the same scene: in which direction did I move from the first view to the second view?\nDirectly left B. Directly right C. Diagonally forward and right D. Diagonally forward and left
+  </div>
+  <table>
+    <tr>
+      <td align="center" width="50%" style="padding:4px;">
+        <img src="./examples/Q2_1.png" alt="Image A" width="100%">
+      </td>
+      <td align="center" width="50%" style="padding:4px;">
+        <img src="./examples/Q2_2.png" alt="Image B" width="100%">
+      </td>
+    </tr>
+  </table>
+</div>
+
+#### 批量测试
+
+构建类似于[examples/examples.jsonl](examples/examples.jsonl)的文件，每一行代表一个问题。
+模型只加载一次，按逐行的顺序逐个回答问题，问题之间互不干扰。
+> `jsonl`更详细的格式可以参考[单图数据](https://internvl.readthedocs.io/en/latest/get_started/chat_data_format.html#single-image-data)和[多图数据](https://internvl.readthedocs.io/en/latest/get_started/chat_data_format.html#multi-image-data)
+
+```bash
+python example.py \
+  --jsonl_path examples/examples.jsonl \
+  --model_path sensenova/SenseSI-InternVL3-8B 
+# --model_path OpenGVLab/InternVL3-8B 
+```
 
 ### 评测
 
