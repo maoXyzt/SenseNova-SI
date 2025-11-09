@@ -134,21 +134,64 @@ TBA
 
 ### Examples
 
-#### Single-image MCQ
+#### Single-Image MCQ
 
 This example is from the `MultiV` subset of [SITE-Bench](https://wenqi-wang20.github.io/SITE-Bench.github.io/):
 
-
 ```bash
-python example.py --model_path sensenova/SenseSI-InternVL3-8B
-# python example.py --model_path OpenGVLab/InternVL3-8B
+python example.py \
+  --image_paths examples/Q1_1.png \
+  --question "<image>\nWhich figure is a top-down view of the given shape?\nOptions:\nA: A\nB: B\nC: C\nD: D" \
+  --model_path sensenova/SenseSI-InternVL3-8B 
+# --model_path OpenGVLab/InternVL3-8B 
 ```
 
-#### Multi-image MCQ
+<!-- Example 1 -->
+<details open>
+  <summary><strong>Details of Example 1</strong></summary>
+  <p><strong>Q:</strong> Which figure is a top-down view of the given shape?\nOptions:\nA: A\nB: B\nC: C\nD: D</p>
+  <div align="center">
+    <img src="./examples/Q1_1.png" style="width:40%; height:auto;">
+  </div>
+</details>
+
+
+#### Multi-Image MCQ
 
 This example is from the `Rotation` subset of [MindCube](https://mind-cube.github.io/):
 
-TBA
+```bash
+python example.py \
+  --image_paths examples/Q2_1.png examples/Q2_2.png \
+  --question "<image><image>\nBased on these two views showing the same scene: in which direction did I move from the first view to the second view?\nDirectly left B. Directly right C. Diagonally forward and right D. Diagonally forward and left" \
+  --model_path sensenova/SenseSI-InternVL3-8B 
+# --model_path OpenGVLab/InternVL3-8B
+```
+
+<!-- Example 2 -->
+<details open>
+  <summary><strong>示例2详情</strong></summary>
+  <p><strong>Q:</strong> Based on these two views showing the same scene: in which direction did I move from the first view to the second view?\nDirectly left B. Directly right C. Diagonally forward and right D. Diagonally forward and left</p>
+  <table>
+    <tr>
+      <td align="center" width="50%" style="padding:4px;">
+        <img src="./examples/Q2_1.png" alt="First image" width="100%">
+      </td>
+      <td align="center" width="50%" style="padding:4px;">
+        <img src="./examples/Q2_2.png" alt="Second image" width="100%">
+      </td>
+    </tr>
+  </table>
+</details>
+
+
+#### Testing Multiple Questions in a Sinlge Run
+
+Prepare a file similar to [examples/examples.jsonl](examples/examples.jsonl), where each line represents a single question.
+
+The model is loaded once and processes questions sequentially. The questions remain independent of each other.
+
+> For more details on the `jsonl` format, refer to the documentation for [Single-Image Data]((https://internvl.readthedocs.io/en/latest/get_started/chat_data_format.html#single-image-data)) and [Multi-Image Data](https://internvl.readthedocs.io/en/latest/get_started/chat_data_format.html#multi-image-data).
 
 
 ### Evaluation
