@@ -19,7 +19,7 @@
     <a href="https://github.com/EvolvingLMMs-Lab/EASI" target="_blank">
         <img alt="Code" src="https://img.shields.io/badge/EASI-Code-100000?style=flat-square&logo=github&logoColor=white" height="20" />
     </a>
-    <a href="https://github.com/OpenSenseNova/SenseNova-SI/blob/main/LICENSE"><img src="https://img.shields.io/github/license/OpenSenseNova/SenseNova-SI?style=flat"></a>
+    <a href="https://github.com/OpenSenseNova/SenseNova-SI/blob/main/LICENSE"><img src="https://img.shields.io/github/license/OpenSenseNova/SenseNova-SI"></a>
 </p>
 
 </div>
@@ -128,10 +128,14 @@
 
 ### 安装
 
+我们推荐使用 [uv](https://docs.astral.sh/uv/) 来管理环境。
+
+> uv 安装指南: <https://docs.astral.sh/uv/getting-started/installation/#installing-uv>
+
 ```bash
 git clone git@github.com:OpenSenseNova/SenseNova-SI.git
 cd SenseNova-SI/
-uv sync
+uv sync --extra cu124 # 或以下值之一: [cu118|cu121|cu124|cu126|cu128|cu129], 取决于您的 CUDA 版本
 source .venv/bin/activate
 ```
 
