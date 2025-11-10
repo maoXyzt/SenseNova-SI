@@ -1,13 +1,13 @@
 <div align="center">
 
-# SenseNova-SI: Scaling Spatial Intelligence with Multimodal Foundation Models
+# SenseNova-SI: 探索空间智能在多模态基础模型上尺度效应
 
 </div>
 
 <div align="center">
 
 
-English | [简体中文](README_CN.md) 
+[English](README.md) | 简体中文
 
 <p align="center">
     <a href="https://huggingface.co/collections/sensenova/sensenova-si" target="_blank">
@@ -25,21 +25,20 @@ English | [简体中文](README_CN.md)
 </div>
 
 
-## Overview
-Despite remarkable progress, leading multimodal models still exhibit notable deficiencies in spatial intelligence:
-the ability to make metric estimations, understand spatial relationships, handle viewpoint changes, and integrate information across complex scenes.
-We take a scaling perspective: constructing and curating a large-scale, comprehensive collection of spatial intelligence data, 
-and through continued training on powerful multimodal foundations, 
-cultivating multi-faceted spatial understanding within the SenseNova-SI family of models.
-*In the future, SenseNova-SI will be integrated with larger-scale in-house models.*
+## 概览
+尽管多模态学习取得了显著进展，当前主流模型在空间智能方面仍存在明显不足，
+包括对尺度关系的估计、空间结构的理解、视角变化的处理，以及复杂场景中信息的整合等能力。
+我们从尺度效应（Scaling）视角出发，构建并整理了一个大规模且多样化的空间智能数据集，
+并在强大的多模态基础模型上持续训练，从而在 SenseNova-SI 模型家族中观察到复合的空间智能。
+*后续 SenseNova-SI 将与更大规模的内部模型进行集成。*
 
-## Release Information
-Currently, we build SenseNova-SI upon popular open-source foundation models to maximize compatibility with existing research pipelines.
-In this release, we present 
-[**SenseNova-SI-InternVL3-2B**](https://huggingface.co/sensenova/SenseNova-SI-InternVL3-2B) and 
+## 发布信息
+目前，我们基于流行的开源基础模型构建 SenseNova-SI，以最大化与现有研究流程的兼容性。
+在本次发布中，我们推出
+[**SenseNova-SI-InternVL3-2B**](https://huggingface.co/sensenova/SenseNova-SI-InternVL3-2B) 与 
 [**SenseNova-SI-InternVL3-8B**](https://huggingface.co/sensenova/SenseNova-SI-InternVL3-8B), 
-which achieve state-of-the-art performance among open-source models of comparable size across four recent spatial intelligence benchmarks: 
-**VSI**, **MMSI**, **MindCube**, and **ViewSpatial**.
+在四个近期发布的空间智能基准测试（**VSI**、**MMSI**、**MindCube**、**ViewSpatial**）上，
+在同等模型规模下均取得了开源模型的最新最优性能（state-of-the-art）。
 
 <table>
   <thead>
@@ -125,9 +124,9 @@ which achieve state-of-the-art performance among open-source models of comparabl
 
 
 
-## 🛠️ QuickStart
+## 🛠️ 快速上手
 
-### Installation
+### 安装
 
 ```bash
 git clone git@github.com:OpenSenseNova/SenseNova-SI.git
@@ -138,7 +137,7 @@ source .venv/bin/activate
 
 #### Hello World
 
-A simple image-free test to verify environment setup and download the model.
+无需图像的简单测试，以验证环境是否正确配置，并下载模型。
 
 ```bash
 python example.py \
@@ -146,11 +145,11 @@ python example.py \
   --model_path sensenova/SenseNova-SI-InternVL3-8B
 ```
 
-### Examples
+### 示例
 
-#### Test Single-Image MCQ
+#### 测试单图多选题
 
-This example is from the `MultiV` subset of [SITE-Bench](https://wenqi-wang20.github.io/SITE-Bench.github.io/):
+该例题源自[SITE-Bench](https://wenqi-wang20.github.io/SITE-Bench.github.io/)的`MultiV`子集:
 
 ```bash
 python example.py \
@@ -162,17 +161,16 @@ python example.py \
 
 <!-- Example 1 -->
 <details open>
-  <summary><strong>Details of Example 1</strong></summary>
+  <summary><strong>示例1详情</strong></summary>
   <p><strong>Q:</strong> Which figure is a top-down view of the given shape?\nOptions:\nA: A\nB: B\nC: C\nD: D</p>
   <div align="center">
     <img src="./examples/Q1_1.png" style="width:40%; height:auto;">
   </div>
 </details>
 
+#### 测试多图多选题
 
-#### Test Multi-Image MCQ
-
-This example is from the `Rotation` subset of [MindCube](https://mind-cube.github.io/):
+该例题源自[MindCube](https://mind-cube.github.io/)的`Rotation`子集:
 
 ```bash
 python example.py \
@@ -184,7 +182,7 @@ python example.py \
 
 <!-- Example 2 -->
 <details open>
-  <summary><strong>Details of Example 2</strong></summary>
+  <summary><strong>示例2详情</strong></summary>
   <p><strong>Q:</strong> Based on these two views showing the same scene: in which direction did I move from the first view to the second view?\nDirectly left B. Directly right C. Diagonally forward and right D. Diagonally forward and left</p>
   <table>
     <tr>
@@ -199,14 +197,13 @@ python example.py \
 </details>
 
 
-#### Test Multiple Questions in a Single Run
+#### 一次测试多个问题
 
-Prepare a file similar to [examples/examples.jsonl](examples/examples.jsonl), where each line represents a single question.
+构建类似于[examples/examples.jsonl](examples/examples.jsonl)的文件，每一行代表一个问题。
 
-The model is loaded once and processes questions sequentially. The questions remain independent of each other.
+模型只加载一次，按逐行的顺序逐个回答问题，问题之间互不干扰。
 
-> For more details on the `jsonl` format, refer to the documentation for [Single-Image Data](https://internvl.readthedocs.io/en/latest/get_started/chat_data_format.html#single-image-data) and [Multi-Image Data](https://internvl.readthedocs.io/en/latest/get_started/chat_data_format.html#multi-image-data).
-
+> `jsonl`更详细的格式可以参考[单图数据](https://internvl.readthedocs.io/en/latest/get_started/chat_data_format.html#single-image-data)和[多图数据](https://internvl.readthedocs.io/en/latest/get_started/chat_data_format.html#multi-image-data)
 
 ```bash
 python example.py \
@@ -215,11 +212,11 @@ python example.py \
 # --model_path OpenGVLab/InternVL3-8B 
 ```
 
-### Evaluation
+### 评测
 
-To reproduce the benchmark results above, please refer to [EASI](https://github.com/EvolvingLMMs-Lab/EASI) to evaluate SenseNova-SI on mainstream spatial intelligence benchmarks.
+如需复现上述基准测试结果，请参考 [EASI](https://github.com/EvolvingLMMs-Lab/EASI) 在主流空间智能基准上评估 SenseNova-SI 的表现。
 
 
-## What's next?
+## 后续计划
 
-We will release the accompanying technical report shortly. Please stay tuned!
+我们将于近期发布配套的技术报告，敬请期待。
