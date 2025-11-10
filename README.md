@@ -129,9 +129,14 @@ which achieve state-of-the-art performance among open-source models of comparabl
 
 ### Installation
 
+We recommend using [uv](https://docs.astral.sh/uv/) to manage the environment.
+
+> uv installation guide: <https://docs.astral.sh/uv/getting-started/installation/#installing-uv>
+
 ```bash
 git clone git@github.com:OpenSenseNova/SenseNova-SI.git
 cd SenseNova-SI/
+uv pip install torch==2.4.0 torchvision --torch-backend=cu124 # or cu118, cu121, ... depending on your CUDA version
 uv sync
 source .venv/bin/activate
 ```
