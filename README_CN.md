@@ -10,7 +10,7 @@
 [English](README.md) | 简体中文
 
 <p align="center">
-    <a href="https://huggingface.co/collections/sensenova/SenseNova-SI" target="_blank">
+    <a href="https://huggingface.co/collections/sensenova/sensenova-si" target="_blank">
         <img alt="SenseNova-SI" src="https://img.shields.io/badge/%F0%9F%A4%97%20_SenseNova_SI-Models-ffc107?color=ffc107&logoColor=white" height="20" />
     </a>
     <a href="https://huggingface.co/spaces/lmms-lab-si/EASI-Leaderboard" target="_blank">
