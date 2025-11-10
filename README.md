@@ -1,6 +1,6 @@
 <div align="center">
 
-# SenseSI: Scaling Spatial Intelligence with Multimodal Foundation Models
+# SenseNova-SI: Scaling Spatial Intelligence with Multimodal Foundation Models
 
 </div>
 
@@ -10,8 +10,8 @@
 English | [简体中文](README_CN.md) 
 
 <p align="center">
-    <a href="https://huggingface.co/collections/sensenova/sensesi" target="_blank">
-        <img alt="SenseSI" src="https://img.shields.io/badge/%F0%9F%A4%97%20_SenseSI-Models-ffc107?color=ffc107&logoColor=white" height="20" />
+    <a href="https://huggingface.co/collections/sensenova/SenseNova-SI" target="_blank">
+        <img alt="SenseNova-SI" src="https://img.shields.io/badge/%F0%9F%A4%97%20_SenseNova_SI-Models-ffc107?color=ffc107&logoColor=white" height="20" />
     </a>
     <a href="https://huggingface.co/spaces/lmms-lab-si/EASI-Leaderboard" target="_blank">
         <img alt="Leaderboard" src="https://img.shields.io/badge/%F0%9F%A4%97%20_EASI-Leaderboard-ffc107?color=ffc107&logoColor=white" height="20" />
@@ -19,7 +19,7 @@ English | [简体中文](README_CN.md)
     <a href="https://github.com/EvolvingLMMs-Lab/EASI" target="_blank">
         <img alt="Code" src="https://img.shields.io/badge/EASI-Code-100000?style=flat-square&logo=github&logoColor=white" height="20" />
     </a>
-    <a href="https://github.com/OpenSenseNova/SenseSI/blob/main/LICENSE"><img src="https://img.shields.io/github/license/OpenSenseNova/SenseSI?style=flat"></a>
+    <a href="https://github.com/OpenSenseNova/SenseNova-SI/blob/main/LICENSE"><img src="https://img.shields.io/github/license/OpenSenseNova/SenseNova-SI?style=flat"></a>
 </p>
 
 </div>
@@ -30,14 +30,14 @@ Despite remarkable progress, leading multimodal models still exhibit notable def
 the ability to make metric estimations, understand spatial relationships, handle viewpoint changes, and integrate information across complex scenes.
 We take a scaling perspective: constructing and curating a large-scale, comprehensive collection of spatial intelligence data, 
 and through continued training on powerful multimodal foundations, 
-cultivating multi-faceted spatial understanding within the SenseSI family of models.
-*In the future, SenseSI will be integrated with larger-scale in-house models.*
+cultivating multi-faceted spatial understanding within the SenseNova-SI family of models.
+*In the future, SenseNova-SI will be integrated with larger-scale in-house models.*
 
 ## Release Information
-Currently, we build SenseSI upon popular open-source foundation models to maximize compatibility with existing research pipelines.
+Currently, we build SenseNova-SI upon popular open-source foundation models to maximize compatibility with existing research pipelines.
 In this release, we present 
-[**SenseSI-InternVL3-2B**](https://huggingface.co/sensenova/SenseSI-InternVL3-2B) and 
-[**SenseSI-InternVL3-8B**](https://huggingface.co/sensenova/SenseSI-InternVL3-8B), 
+[**SenseNova-SI-InternVL3-2B**](https://huggingface.co/sensenova/SenseNova-SI-InternVL3-2B) and 
+[**SenseNova-SI-InternVL3-8B**](https://huggingface.co/sensenova/SenseNova-SI-InternVL3-8B), 
 which achieve state-of-the-art performance among open-source models of comparable size across four recent spatial intelligence benchmarks: 
 **VSI**, **MMSI**, **MindCube**, and **ViewSpatial**.
 
@@ -77,7 +77,7 @@ which achieve state-of-the-art performance among open-source models of comparabl
       <td>SpatialMLLM-4B</td><td>45.98</td><td>26.10</td><td>33.46</td><td>34.66</td>
     </tr>
     <tr>
-      <td><strong>SenseSI-InternVL3-2B</strong></td>
+      <td><strong>SenseNova-SI-InternVL3-2B</strong></td>
       <td><strong>58.47</strong></td>
       <td><strong>35.50</strong></td>
       <td><strong>71.35</strong></td>
@@ -102,7 +102,7 @@ which achieve state-of-the-art performance among open-source models of comparabl
       <td>ViLaSR-7B</td><td>44.63</td><td>30.20</td><td>35.10</td><td>35.71</td>
     </tr>
     <tr>
-      <td><strong>SenseSI-InternVL3-8B</strong></td>
+      <td><strong>SenseNova-SI-InternVL3-8B</strong></td>
       <td><strong>62.80</strong></td>
       <td><strong>37.90</strong></td>
       <td><strong>89.33</strong></td>
@@ -130,8 +130,8 @@ which achieve state-of-the-art performance among open-source models of comparabl
 ### Installation
 
 ```bash
-git clone git@github.com:OpenSenseNova/SenseSI.git
-cd SenseSI/
+git clone git@github.com:OpenSenseNova/SenseNova-SI.git
+cd SenseNova-SI/
 uv sync
 source .venv/bin/activate
 ```
@@ -143,7 +143,7 @@ A simple image-free test to verify environment setup and download the model.
 ```bash
 python example.py \
   --question "Hello" \
-  --model_path sensenova/SenseSI-InternVL3-8B
+  --model_path sensenova/SenseNova-SI-InternVL3-8B
 ```
 
 ### Examples
@@ -156,7 +156,7 @@ This example is from the `MultiV` subset of [SITE-Bench](https://wenqi-wang20.gi
 python example.py \
   --image_paths examples/Q1_1.png \
   --question "<image>\nWhich figure is a top-down view of the given shape?\nOptions:\nA: A\nB: B\nC: C\nD: D" \
-  --model_path sensenova/SenseSI-InternVL3-8B 
+  --model_path sensenova/SenseNova-SI-InternVL3-8B 
 # --model_path OpenGVLab/InternVL3-8B 
 ```
 
@@ -178,7 +178,7 @@ This example is from the `Rotation` subset of [MindCube](https://mind-cube.githu
 python example.py \
   --image_paths examples/Q2_1.png examples/Q2_2.png \
   --question "<image><image>\nBased on these two views showing the same scene: in which direction did I move from the first view to the second view?\nA. Directly left B. Directly right C. Diagonally forward and right D. Diagonally forward and left" \
-  --model_path sensenova/SenseSI-InternVL3-8B 
+  --model_path sensenova/SenseNova-SI-InternVL3-8B 
 # --model_path OpenGVLab/InternVL3-8B
 ```
 
@@ -211,13 +211,13 @@ The model is loaded once and processes questions sequentially. The questions rem
 ```bash
 python example.py \
   --jsonl_path examples/examples.jsonl \
-  --model_path sensenova/SenseSI-InternVL3-8B 
+  --model_path sensenova/SenseNova-SI-InternVL3-8B 
 # --model_path OpenGVLab/InternVL3-8B 
 ```
 
 ### Evaluation
 
-To reproduce the benchmark results above, please refer to [EASI](https://github.com/EvolvingLMMs-Lab/EASI) to evaluate SenseSI on mainstream spatial intelligence benchmarks.
+To reproduce the benchmark results above, please refer to [EASI](https://github.com/EvolvingLMMs-Lab/EASI) to evaluate SenseNova-SI on mainstream spatial intelligence benchmarks.
 
 
 ## What's next?

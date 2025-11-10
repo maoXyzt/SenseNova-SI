@@ -1,6 +1,6 @@
 <div align="center">
 
-# SenseSI: 探索空间智能在多模态基础模型上尺度效应
+# SenseNova-SI: 探索空间智能在多模态基础模型上尺度效应
 
 </div>
 
@@ -10,8 +10,8 @@
 [English](README.md) | 简体中文
 
 <p align="center">
-    <a href="https://huggingface.co/collections/sensenova/sensesi" target="_blank">
-        <img alt="SenseSI" src="https://img.shields.io/badge/%F0%9F%A4%97%20_SenseSI-Models-ffc107?color=ffc107&logoColor=white" height="20" />
+    <a href="https://huggingface.co/collections/sensenova/SenseNova-SI" target="_blank">
+        <img alt="SenseNova-SI" src="https://img.shields.io/badge/%F0%9F%A4%97%20_SenseNova_SI-Models-ffc107?color=ffc107&logoColor=white" height="20" />
     </a>
     <a href="https://huggingface.co/spaces/lmms-lab-si/EASI-Leaderboard" target="_blank">
         <img alt="Leaderboard" src="https://img.shields.io/badge/%F0%9F%A4%97%20_EASI-Leaderboard-ffc107?color=ffc107&logoColor=white" height="20" />
@@ -19,7 +19,7 @@
     <a href="https://github.com/EvolvingLMMs-Lab/EASI" target="_blank">
         <img alt="Code" src="https://img.shields.io/badge/EASI-Code-100000?style=flat-square&logo=github&logoColor=white" height="20" />
     </a>
-    <a href="https://github.com/OpenSenseNova/SenseSI/blob/main/LICENSE"><img src="https://img.shields.io/github/license/OpenSenseNova/SenseSI?style=flat"></a>
+    <a href="https://github.com/OpenSenseNova/SenseNova-SI/blob/main/LICENSE"><img src="https://img.shields.io/github/license/OpenSenseNova/SenseNova-SI?style=flat"></a>
 </p>
 
 </div>
@@ -29,14 +29,14 @@
 尽管多模态学习取得了显著进展，当前主流模型在空间智能方面仍存在明显不足，
 包括对尺度关系的估计、空间结构的理解、视角变化的处理，以及复杂场景中信息的整合等能力。
 我们从尺度效应（Scaling）视角出发，构建并整理了一个大规模且多样化的空间智能数据集，
-并在强大的多模态基础模型上持续训练，从而在 SenseSI 模型家族中观察到复合的空间智能。
-*后续 SenseSI 将与更大规模的内部模型进行集成。*
+并在强大的多模态基础模型上持续训练，从而在 SenseNova-SI 模型家族中观察到复合的空间智能。
+*后续 SenseNova-SI 将与更大规模的内部模型进行集成。*
 
 ## 发布信息
-目前，我们基于流行的开源基础模型构建 SenseSI，以最大化与现有研究流程的兼容性。
+目前，我们基于流行的开源基础模型构建 SenseNova-SI，以最大化与现有研究流程的兼容性。
 在本次发布中，我们推出
-[**SenseSI-InternVL3-2B**](https://huggingface.co/sensenova/SenseSI-InternVL3-2B) 与 
-[**SenseSI-InternVL3-8B**](https://huggingface.co/sensenova/SenseSI-InternVL3-8B), 
+[**SenseNova-SI-InternVL3-2B**](https://huggingface.co/sensenova/SenseNova-SI-InternVL3-2B) 与 
+[**SenseNova-SI-InternVL3-8B**](https://huggingface.co/sensenova/SenseNova-SI-InternVL3-8B), 
 在四个近期发布的空间智能基准测试（**VSI**、**MMSI**、**MindCube**、**ViewSpatial**）上，
 在同等模型规模下均取得了开源模型的最新最优性能（state-of-the-art）。
 
@@ -76,7 +76,7 @@
       <td>SpatialMLLM-4B</td><td>45.98</td><td>26.10</td><td>33.46</td><td>34.66</td>
     </tr>
     <tr>
-      <td><strong>SenseSI-InternVL3-2B</strong></td>
+      <td><strong>SenseNova-SI-InternVL3-2B</strong></td>
       <td><strong>58.47</strong></td>
       <td><strong>35.50</strong></td>
       <td><strong>71.35</strong></td>
@@ -101,7 +101,7 @@
       <td>ViLaSR-7B</td><td>44.63</td><td>30.20</td><td>35.10</td><td>35.71</td>
     </tr>
     <tr>
-      <td><strong>SenseSI-InternVL3-8B</strong></td>
+      <td><strong>SenseNova-SI-InternVL3-8B</strong></td>
       <td><strong>62.80</strong></td>
       <td><strong>37.90</strong></td>
       <td><strong>89.33</strong></td>
@@ -129,8 +129,8 @@
 ### 安装
 
 ```bash
-git clone git@github.com:OpenSenseNova/SenseSI.git
-cd SenseSI/
+git clone git@github.com:OpenSenseNova/SenseNova-SI.git
+cd SenseNova-SI/
 uv sync
 source .venv/bin/activate
 ```
@@ -142,7 +142,7 @@ source .venv/bin/activate
 ```bash
 python example.py \
   --question "Hello" \
-  --model_path sensenova/SenseSI-InternVL3-8B
+  --model_path sensenova/SenseNova-SI-InternVL3-8B
 ```
 
 ### 示例
@@ -155,7 +155,7 @@ python example.py \
 python example.py \
   --image_paths examples/Q1_1.png \
   --question "<image>\nWhich figure is a top-down view of the given shape?\nOptions:\nA: A\nB: B\nC: C\nD: D" \
-  --model_path sensenova/SenseSI-InternVL3-8B 
+  --model_path sensenova/SenseNova-SI-InternVL3-8B 
 # --model_path OpenGVLab/InternVL3-8B 
 ```
 
@@ -176,7 +176,7 @@ python example.py \
 python example.py \
   --image_paths examples/Q2_1.png examples/Q2_2.png \
   --question "<image><image>\nBased on these two views showing the same scene: in which direction did I move from the first view to the second view?\nA. Directly left B. Directly right C. Diagonally forward and right D. Diagonally forward and left" \
-  --model_path sensenova/SenseSI-InternVL3-8B 
+  --model_path sensenova/SenseNova-SI-InternVL3-8B 
 # --model_path OpenGVLab/InternVL3-8B
 ```
 
@@ -208,13 +208,13 @@ python example.py \
 ```bash
 python example.py \
   --jsonl_path examples/examples.jsonl \
-  --model_path sensenova/SenseSI-InternVL3-8B 
+  --model_path sensenova/SenseNova-SI-InternVL3-8B 
 # --model_path OpenGVLab/InternVL3-8B 
 ```
 
 ### 评测
 
-如需复现上述基准测试结果，请参考 [EASI](https://github.com/EvolvingLMMs-Lab/EASI) 在主流空间智能基准上评估 SenseSI 的表现。
+如需复现上述基准测试结果，请参考 [EASI](https://github.com/EvolvingLMMs-Lab/EASI) 在主流空间智能基准上评估 SenseNova-SI 的表现。
 
 
 ## 后续计划
